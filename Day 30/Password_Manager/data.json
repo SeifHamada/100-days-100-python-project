@@ -1,0 +1,22 @@
+{
+    "Amazon": {
+        "email": "example@gmail.com",
+        "password": "mRFu1k$C(&b3bk(0W9"
+    },
+    "Ebay": {
+        "email": "example@gmail.com",
+        "password": "#C0(aGqC0WMZ$N7O"
+    },
+    "Facebook": {
+        "email": "example@gmail.com",
+        "password": "fH2pB!o7x)wT)C"
+    },
+    "test": {
+        "email": "example@gmail.com",
+        "password": "w62RPxz0Mr!!!c1"
+    },
+    "test1": {
+        "email": "example@gmail.com",
+        "password": "d3#)D56k!XR+8aXKr"
+    }
+}
