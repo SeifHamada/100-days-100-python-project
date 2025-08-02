@@ -1,0 +1,1 @@
+This is the code solution that was given out in the course resources since i couldn't create a tinder account and got baned when i created the dummy account.
