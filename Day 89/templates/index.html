@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>To-Do List</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>My To-Do List</h1>
+      =
+      <form method="POST">
+        <input type="text" name="task" placeholder="Enter a task" />
+        <button type="submit">Add</button>
+      </form>
+
+      <ul>
+        {% for task in tasks %}
+        <li>
+          <a href="{{ url_for('toggle', task_id=loop.index0) }}">
+            <input
+              type="checkbox"
+              {%
+              if
+              task.done
+              %}checked{%
+              endif
+              %}
+              disabled
+            />
+          </a>
+          {% if task.done %}
+          <s>{{ task.text }}</s>
+          {% else %} {{ task.text }} {% endif %}
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </body>
+</html>
