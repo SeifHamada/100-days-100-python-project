@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Image Color Palette</title>
+    <style>
+      .color-box {
+        width: 100px;
+        height: 100px;
+        display: inline-block;
+        margin: 5px;
+        color: white;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        line-height: 100px;
+        border-radius: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Upload an Image to Get Top 10 Colors</h1>
+    <form method="POST" enctype="multipart/form-data">
+      <input type="file" name="file" accept="image/*" />
+      <input type="submit" value="Upload" />
+    </form>
+
+    {% if colors %}
+    <h2>Top Colors:</h2>
+    {% for color in colors %}
+    <div class="color-box" style="background-color: {{ color }}">
+      {{ color }}
+    </div>
+    {% endfor %} {% endif %}
+  </body>
+</html>
