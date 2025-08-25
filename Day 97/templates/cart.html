@@ -1,0 +1,10 @@
+<h1>Your Cart</h1>
+<ul>
+  {% for item in cart_items %}
+  <li>{{ item.name }} x {{ item.qty }} = ${{ item.subtotal/100 }}</li>
+  {% endfor %}
+</ul>
+<p>Total: ${{ total/100 }}</p>
+<form action="{{ url_for('checkout') }}" method="post">
+  <button type="submit">Checkout</button>
+</form>
